@@ -1,0 +1,109 @@
+{
+  "collection": "firetrucks",
+  "schema": {
+    "bsonType": "object",
+    "required": ["vehicleNumber", "type", "stationId", "status", "location"],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "vehicleNumber": {
+        "bsonType": "string",
+        "pattern": "^[A-Z]{2}[0-9]{2}[A-Z]{1,2}[0-9]{4}$"
+      },
+      "type": {
+        "bsonType": "string",
+        "enum": ["pumper", "ladder", "tanker", "rescue", "hazmat", "aerial"],
+        "description": "Fire truck type"
+      },
+      "stationId": {
+        "bsonType": "objectId",
+        "description": "Reference to fire station"
+      },
+      "captain": {
+        "bsonType": "object",
+        "properties": {
+          "userId": { "bsonType": "objectId" },
+          "name": { "bsonType": "string" },
+          "phone": { "bsonType": "string" },
+          "rank": { "bsonType": "string" }
+        }
+      },
+      "crew": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "userId": { "bsonType": "objectId" },
+            "name": { "bsonType": "string" },
+            "role": { "bsonType": "string" },
+            "phone": { "bsonType": "string" },
+            "onDuty": { "bsonType": "bool" }
+          }
+        },
+        "description": "Fire fighters on this truck"
+      },
+      "equipment": {
+        "bsonType": "object",
+        "properties": {
+          "waterCapacity": { "bsonType": "int", "description": "Liters" },
+          "currentWaterLevel": { "bsonType": "int", "description": "Liters" },
+          "foamCapacity": { "bsonType": "int", "description": "Liters" },
+          "currentFoamLevel": { "bsonType": "int" },
+          "ladderHeight": { "bsonType": "int", "description": "Meters" },
+          "hoses": { "bsonType": "int" },
+          "oxygenTanks": { "bsonType": "int" },
+          "powerTools": { "bsonType": "array" },
+          "rescueEquipment": { "bsonType": "array" }
+        }
+      },
+      "status": {
+        "bsonType": "string",
+        "enum": ["available", "on_duty", "returning", "refilling", "maintenance", "offline"]
+      },
+      "location": {
+        "bsonType": "object",
+        "required": ["type", "coordinates"],
+        "properties": {
+          "type": { "bsonType": "string", "enum": ["Point"] },
+          "coordinates": {
+            "bsonType": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "bsonType": "double" }
+          },
+          "address": { "bsonType": "string" }
+        }
+      },
+      "currentBookingId": {
+        "bsonType": "objectId"
+      },
+      "totalIncidents": {
+        "bsonType": "int",
+        "description": "Total incidents attended"
+      },
+      "rating": {
+        "bsonType": "double"
+      },
+      "lastMaintenanceDate": {
+        "bsonType": "date"
+      },
+      "nextMaintenanceDue": {
+        "bsonType": "date"
+      },
+      "fitnessExpiryDate": {
+        "bsonType": "date"
+      },
+      "isActive": {
+        "bsonType": "bool",
+        "default": true
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}

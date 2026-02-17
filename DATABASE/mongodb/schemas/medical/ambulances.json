@@ -1,0 +1,113 @@
+{
+  "collection": "ambulances",
+  "schema": {
+    "bsonType": "object",
+    "required": ["vehicleNumber", "type", "hospitalId", "status", "location"],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "vehicleNumber": {
+        "bsonType": "string",
+        "description": "Registration number of ambulance",
+        "pattern": "^[A-Z]{2}[0-9]{2}[A-Z]{1,2}[0-9]{4}$"
+      },
+      "type": {
+        "bsonType": "string",
+        "enum": ["BLS", "ALS", "ICU", "Neonatal", "Air"],
+        "description": "BLS: Basic Life Support, ALS: Advanced Life Support, ICU: Intensive Care Unit"
+      },
+      "hospitalId": {
+        "bsonType": "objectId",
+        "description": "Reference to hospital this ambulance belongs to"
+      },
+      "driverId": {
+        "bsonType": "objectId",
+        "description": "Reference to driver user"
+      },
+      "equipment": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "quantity": { "bsonType": "int" },
+            "working": { "bsonType": "bool" }
+          }
+        },
+        "description": "Medical equipment available in ambulance"
+      },
+      "medicalStaff": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "role": { "bsonType": "string" },
+            "phone": { "bsonType": "string" },
+            "onDuty": { "bsonType": "bool" }
+          }
+        }
+      },
+      "status": {
+        "bsonType": "string",
+        "enum": ["available", "on_duty", "maintenance", "offline"],
+        "description": "Current status of ambulance"
+      },
+      "location": {
+        "bsonType": "object",
+        "required": ["type", "coordinates"],
+        "properties": {
+          "type": {
+            "bsonType": "string",
+            "enum": ["Point"]
+          },
+          "coordinates": {
+            "bsonType": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "bsonType": "double"
+            },
+            "description": "[longitude, latitude]"
+          },
+          "address": { "bsonType": "string" }
+        }
+      },
+      "currentBookingId": {
+        "bsonType": "objectId",
+        "description": "Reference to current active booking"
+      },
+      "totalTrips": {
+        "bsonType": "int",
+        "description": "Total number of trips completed"
+      },
+      "rating": {
+        "bsonType": "double",
+        "description": "Average rating (0-5)"
+      },
+      "lastMaintenanceDate": {
+        "bsonType": "date"
+      },
+      "nextMaintenanceDue": {
+        "bsonType": "date"
+      },
+      "insuranceExpiryDate": {
+        "bsonType": "date"
+      },
+      "fitnessExpiryDate": {
+        "bsonType": "date"
+      },
+      "isActive": {
+        "bsonType": "bool",
+        "default": true
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}

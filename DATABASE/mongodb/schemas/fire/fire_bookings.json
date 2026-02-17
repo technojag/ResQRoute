@@ -1,0 +1,179 @@
+{
+  "collection": "fire_bookings",
+  "schema": {
+    "bsonType": "object",
+    "required": ["userId", "fireType", "location", "severity", "status"],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "bookingNumber": {
+        "bsonType": "string",
+        "description": "Unique booking reference (e.g., FIRE20240216001)"
+      },
+      "userId": {
+        "bsonType": "objectId"
+      },
+      "fireType": {
+        "bsonType": "string",
+        "enum": [
+          "residential", "commercial", "industrial", "forest",
+          "vehicle", "electrical", "chemical", "gas_leak",
+          "explosion", "other"
+        ]
+      },
+      "severity": {
+        "bsonType": "string",
+        "enum": ["minor", "moderate", "major", "catastrophic"],
+        "description": "AI-calculated severity"
+      },
+      "location": {
+        "bsonType": "object",
+        "required": ["type", "coordinates"],
+        "properties": {
+          "type": { "bsonType": "string", "enum": ["Point"] },
+          "coordinates": {
+            "bsonType": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "bsonType": "double" }
+          },
+          "address": { "bsonType": "string" },
+          "landmark": { "bsonType": "string" }
+        }
+      },
+      "buildingInfo": {
+        "bsonType": "object",
+        "properties": {
+          "type": { "bsonType": "string", "enum": ["residential", "commercial", "industrial", "high_rise", "slum"] },
+          "floors": { "bsonType": "int" },
+          "affectedFloors": { "bsonType": "array", "items": { "bsonType": "int" } },
+          "occupants": { "bsonType": "int", "description": "Estimated people inside" },
+          "evacuated": { "bsonType": "int" },
+          "trapped": { "bsonType": "int" },
+          "hasBasement": { "bsonType": "bool" },
+          "basementFlooded": { "bsonType": "bool" }
+        }
+      },
+      "fireDetails": {
+        "bsonType": "object",
+        "properties": {
+          "source": { "bsonType": "string" },
+          "spreadRate": { "bsonType": "string", "enum": ["slow", "moderate", "fast", "very_fast"] },
+          "smokeIntensity": { "bsonType": "string", "enum": ["light", "moderate", "heavy", "very_heavy"] },
+          "flameHeight": { "bsonType": "double", "description": "Meters" },
+          "windSpeed": { "bsonType": "double", "description": "km/h" },
+          "windDirection": { "bsonType": "string" },
+          "nearbyStructures": { "bsonType": "array", "items": { "bsonType": "string" } },
+          "waterSupplyNearby": { "bsonType": "bool" },
+          "hazardousMaterials": { "bsonType": "bool" },
+          "materialsList": { "bsonType": "array", "items": { "bsonType": "string" } }
+        }
+      },
+      "casualties": {
+        "bsonType": "object",
+        "properties": {
+          "injuries": { "bsonType": "int" },
+          "critical": { "bsonType": "int" },
+          "deaths": { "bsonType": "int" }
+        }
+      },
+      "assignedFireTrucks": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "truckId": { "bsonType": "objectId" },
+            "type": { "bsonType": "string" },
+            "assignedAt": { "bsonType": "date" },
+            "eta": { "bsonType": "int" },
+            "status": { "bsonType": "string" }
+          }
+        }
+      },
+      "resourcesNeeded": {
+        "bsonType": "object",
+        "properties": {
+          "firetrucks": { "bsonType": "int" },
+          "waterTankers": { "bsonType": "int" },
+          "ladderTrucks": { "bsonType": "int" },
+          "rescueVehicles": { "bsonType": "int" },
+          "ambulances": { "bsonType": "int" },
+          "estimatedWater": { "bsonType": "int", "description": "Liters" },
+          "estimatedFoam": { "bsonType": "int", "description": "Liters" }
+        }
+      },
+      "aiPredictions": {
+        "bsonType": "object",
+        "properties": {
+          "spreadPrediction": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "timeMinutes": { "bsonType": "int" },
+                "estimatedRadius": { "bsonType": "double" },
+                "confidence": { "bsonType": "double" }
+              }
+            }
+          },
+          "recommendedTrucks": { "bsonType": "int" },
+          "estimatedControlTime": { "bsonType": "int", "description": "Minutes" }
+        }
+      },
+      "status": {
+        "bsonType": "string",
+        "enum": [
+          "reported", "dispatching", "en_route", "on_scene",
+          "under_control", "controlled", "extinguished",
+          "investigation", "completed", "cancelled"
+        ]
+      },
+      "timeline": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "status": { "bsonType": "string" },
+            "timestamp": { "bsonType": "date" },
+            "note": { "bsonType": "string" }
+          }
+        }
+      },
+      "evacuationStatus": {
+        "bsonType": "object",
+        "properties": {
+          "required": { "bsonType": "bool" },
+          "radius": { "bsonType": "double", "description": "Meters" },
+          "peopleEvacuated": { "bsonType": "int" },
+          "shelterLocation": { "bsonType": "string" }
+        }
+      },
+      "trafficSignalsOverridden": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "signalId": { "bsonType": "string" },
+            "overriddenAt": { "bsonType": "date" }
+          }
+        }
+      },
+      "priority": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 10
+      },
+      "isActive": {
+        "bsonType": "bool",
+        "default": true
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}

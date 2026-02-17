@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Central Fire Station Delhi",
+    "code": "CFS-DL-001",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2245, 28.6358],
+      "address": "Connaught Place, New Delhi, Delhi 110001",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110001"
+    },
+    "contactNumber": "+91-11-23456789",
+    "emergencyNumber": "101",
+    "email": "central.firestation@delhi.gov.in",
+    "chiefOfficer": {
+      "name": "Suresh Nair",
+      "rank": "Fire Chief",
+      "phone": "+91-9876543220",
+      "email": "suresh.nair@delhi.gov.in"
+    },
+    "personnel": {
+      "total": 85,
+      "onDuty": 42,
+      "fireOfficers": 12,
+      "fireFighters": 55,
+      "drivers": 10,
+      "support": 8
+    },
+    "equipment": {
+      "firetrucks": 8,
+      "waterTankers": 3,
+      "ladderTrucks": 2,
+      "rescueVehicles": 2,
+      "foamTenders": 1
+    },
+    "coverageArea": {
+      "radius": 15,
+      "districts": ["Central Delhi", "New Delhi", "Connaught Place"]
+    },
+    "status": "operational",
+    "rating": 4.7,
+    "totalIncidentsHandled": 3420,
+    "isActive": true,
+    "createdAt": { "$date": "2020-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "name": "North Delhi Fire Station",
+    "code": "NFS-DL-002",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2167, 28.7041],
+      "address": "Model Town, Delhi 110009",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110009"
+    },
+    "contactNumber": "+91-11-27654321",
+    "emergencyNumber": "101",
+    "email": "north.firestation@delhi.gov.in",
+    "chiefOfficer": {
+      "name": "Vijay Kumar",
+      "rank": "Fire Chief",
+      "phone": "+91-9876543221",
+      "email": "vijay.kumar@delhi.gov.in"
+    },
+    "personnel": {
+      "total": 70,
+      "onDuty": 35,
+      "fireOfficers": 10,
+      "fireFighters": 45,
+      "drivers": 8,
+      "support": 7
+    },
+    "equipment": {
+      "firetrucks": 6,
+      "waterTankers": 2,
+      "ladderTrucks": 1,
+      "rescueVehicles": 1,
+      "foamTenders": 1
+    },
+    "coverageArea": {
+      "radius": 12,
+      "districts": ["North Delhi", "Model Town", "Civil Lines"]
+    },
+    "status": "operational",
+    "rating": 4.5,
+    "totalIncidentsHandled": 2810,
+    "isActive": true,
+    "createdAt": { "$date": "2020-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  }
+]

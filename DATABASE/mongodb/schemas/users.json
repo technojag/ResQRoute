@@ -1,0 +1,86 @@
+{
+  "collection": "users",
+  "schema": {
+    "bsonType": "object",
+    "required": ["name", "phone", "email", "password", "role", "createdAt"],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string",
+        "minLength": 2,
+        "maxLength": 100
+      },
+      "phone": {
+        "bsonType": "string",
+        "pattern": "^\\+?[1-9]\\d{1,14}$"
+      },
+      "email": {
+        "bsonType": "string",
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      },
+      "password": {
+        "bsonType": "string"
+      },
+      "role": {
+        "bsonType": "string",
+        "enum": ["user", "ambulance_driver", "fire_fighter", "hospital_admin", "control_center", "admin"]
+      },
+      "profileImage": {
+        "bsonType": "string"
+      },
+      "address": {
+        "bsonType": "object",
+        "properties": {
+          "street": { "bsonType": "string" },
+          "city": { "bsonType": "string" },
+          "state": { "bsonType": "string" },
+          "pincode": { "bsonType": "string" },
+          "country": { "bsonType": "string" }
+        }
+      },
+      "emergencyContacts": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "phone": { "bsonType": "string" },
+            "relation": { "bsonType": "string" }
+          }
+        }
+      },
+      "medicalHistory": {
+        "bsonType": "object",
+        "properties": {
+          "bloodGroup": { 
+            "bsonType": "string",
+            "enum": ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+          },
+          "allergies": { "bsonType": "array" },
+          "chronicDiseases": { "bsonType": "array" },
+          "currentMedications": { "bsonType": "array" }
+        }
+      },
+      "fcmToken": {
+        "bsonType": "string"
+      },
+      "isVerified": {
+        "bsonType": "bool"
+      },
+      "isActive": {
+        "bsonType": "bool"
+      },
+      "lastLogin": {
+        "bsonType": "date"
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}

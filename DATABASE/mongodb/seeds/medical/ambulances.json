@@ -1,0 +1,97 @@
+[
+  {
+    "vehicleNumber": "DL01AB1234",
+    "type": "BLS",
+    "hospitalId": null,
+    "equipment": [
+      { "name": "Oxygen Cylinder", "quantity": 2, "working": true },
+      { "name": "First Aid Kit", "quantity": 1, "working": true },
+      { "name": "Stretcher", "quantity": 1, "working": true },
+      { "name": "Defibrillator", "quantity": 0, "working": false }
+    ],
+    "medicalStaff": [
+      { "name": "Rajesh Kumar", "role": "EMT", "phone": "+91-9876543210", "onDuty": true },
+      { "name": "Priya Sharma", "role": "Paramedic", "phone": "+91-9876543211", "onDuty": true }
+    ],
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2090, 28.5672],
+      "address": "Near AIIMS Delhi"
+    },
+    "totalTrips": 245,
+    "rating": 4.5,
+    "lastMaintenanceDate": { "$date": "2024-01-15T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-04-15T00:00:00.000Z" },
+    "insuranceExpiryDate": { "$date": "2024-12-31T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-03-31T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2023-06-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "vehicleNumber": "DL01AB5678",
+    "type": "ALS",
+    "hospitalId": null,
+    "equipment": [
+      { "name": "Ventilator", "quantity": 1, "working": true },
+      { "name": "Defibrillator", "quantity": 1, "working": true },
+      { "name": "ECG Monitor", "quantity": 1, "working": true },
+      { "name": "IV Kit", "quantity": 3, "working": true },
+      { "name": "Oxygen Cylinder", "quantity": 3, "working": true }
+    ],
+    "medicalStaff": [
+      { "name": "Dr. Amit Singh", "role": "Doctor", "phone": "+91-9876543212", "onDuty": true },
+      { "name": "Neha Verma", "role": "Nurse", "phone": "+91-9876543213", "onDuty": true },
+      { "name": "Suresh Yadav", "role": "Paramedic", "phone": "+91-9876543214", "onDuty": true }
+    ],
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2273, 28.5403],
+      "address": "Near Apollo Hospital"
+    },
+    "totalTrips": 189,
+    "rating": 4.8,
+    "lastMaintenanceDate": { "$date": "2024-02-01T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-05-01T00:00:00.000Z" },
+    "insuranceExpiryDate": { "$date": "2024-11-30T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-02-28T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2023-07-15T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "vehicleNumber": "DL02AB9012",
+    "type": "ICU",
+    "hospitalId": null,
+    "equipment": [
+      { "name": "Ventilator", "quantity": 1, "working": true },
+      { "name": "Defibrillator", "quantity": 1, "working": true },
+      { "name": "ECG Monitor", "quantity": 1, "working": true },
+      { "name": "Infusion Pump", "quantity": 2, "working": true },
+      { "name": "Oxygen Cylinder", "quantity": 4, "working": true },
+      { "name": "Suction Machine", "quantity": 1, "working": true }
+    ],
+    "medicalStaff": [
+      { "name": "Dr. Kavita Desai", "role": "Intensivist", "phone": "+91-9876543215", "onDuty": true },
+      { "name": "Ritu Gupta", "role": "ICU Nurse", "phone": "+91-9876543216", "onDuty": true },
+      { "name": "Manish Pandey", "role": "Paramedic", "phone": "+91-9876543217", "onDuty": true }
+    ],
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2064, 28.5675],
+      "address": "Near Safdarjung Hospital"
+    },
+    "totalTrips": 156,
+    "rating": 4.9,
+    "lastMaintenanceDate": { "$date": "2024-01-20T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-04-20T00:00:00.000Z" },
+    "insuranceExpiryDate": { "$date": "2024-10-31T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-01-31T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2023-08-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  }
+]

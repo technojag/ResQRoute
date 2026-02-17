@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Apollo Hospital Delhi",
+    "type": "private",
+    "category": "multi_specialty",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2273, 28.5403],
+      "address": "Sarita Vihar, Delhi 110076",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110076"
+    },
+    "contactNumber": "+91-11-26825000",
+    "emergencyNumber": "+91-11-26825001",
+    "email": "delhi@apollohospitals.com",
+    "departments": [
+      { "name": "Cardiology", "available": true, "doctors": 50, "nurses": 140 },
+      { "name": "Neurology", "available": true, "doctors": 42, "nurses": 105 },
+      { "name": "Oncology", "available": true, "doctors": 35, "nurses": 90 },
+      { "name": "Emergency", "available": true, "doctors": 65, "nurses": 200 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 700,
+      "availableBeds": 18,
+      "icuBeds": 150,
+      "availableICU": 4,
+      "ventilators": 80,
+      "availableVentilators": 6
+    },
+    "specializations": [
+      "cardiology", "neurology", "oncology", "orthopedics",
+      "trauma", "stroke", "cardiac_arrest", "maternity"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "mri", "xray", "ultrasound", "dialysis",
+      "operation_theater", "cath_lab", "nicu", "picu",
+      "ambulance_service", "pharmacy", "lab"
+    ],
+    "pricing": {
+      "consultationFee": 1500,
+      "emergencyFee": 3000,
+      "bedChargesPerDay": 8000,
+      "icuChargesPerDay": 25000,
+      "acceptsInsurance": true,
+      "acceptsAyushman": false,
+      "estimatedCost": {
+        "cardiac": 300000,
+        "accident": 150000,
+        "stroke": 250000,
+        "general": 50000
+      }
+    },
+    "governmentSchemes": [],
+    "accreditation": ["NABH", "JCI", "ISO"],
+    "status": "operational",
+    "rating": 4.7,
+    "totalPatientsTreated": 850000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 8:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "name": "Fortis Hospital Noida",
+    "type": "private",
+    "category": "multi_specialty",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.3667, 28.5355],
+      "address": "Sector 62, Noida, UP 201301",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "pincode": "201301"
+    },
+    "contactNumber": "+91-120-7133133",
+    "emergencyNumber": "+91-120-7133100",
+    "email": "noida@fortishealthcare.com",
+    "departments": [
+      { "name": "Cardiology", "available": true, "doctors": 45, "nurses": 125 },
+      { "name": "Neurology", "available": true, "doctors": 38, "nurses": 95 },
+      { "name": "Emergency", "available": true, "doctors": 60, "nurses": 180 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 600,
+      "availableBeds": 15,
+      "icuBeds": 130,
+      "availableICU": 3,
+      "ventilators": 70,
+      "availableVentilators": 5
+    },
+    "specializations": [
+      "cardiology", "neurology", "orthopedics", "trauma",
+      "stroke", "cardiac_arrest", "pediatrics"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "mri", "xray", "dialysis", "operation_theater",
+      "cath_lab", "ambulance_service", "pharmacy", "lab"
+    ],
+    "pricing": {
+      "consultationFee": 1200,
+      "emergencyFee": 2500,
+      "bedChargesPerDay": 7000,
+      "icuChargesPerDay": 22000,
+      "acceptsInsurance": true,
+      "acceptsAyushman": false,
+      "estimatedCost": {
+        "cardiac": 280000,
+        "accident": 140000,
+        "stroke": 230000,
+        "general": 45000
+      }
+    },
+    "governmentSchemes": [],
+    "accreditation": ["NABH", "ISO"],
+    "status": "operational",
+    "rating": 4.6,
+    "totalPatientsTreated": 720000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 8:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "name": "Max Super Specialty Hospital",
+    "type": "private",
+    "category": "multi_specialty",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2084, 28.5245],
+      "address": "Press Enclave Road, Saket, Delhi 110017",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110017"
+    },
+    "contactNumber": "+91-11-26515050",
+    "emergencyNumber": "+91-11-26515001",
+    "email": "saket@maxhealthcare.com",
+    "departments": [
+      { "name": "Cardiology", "available": true, "doctors": 48, "nurses": 130 },
+      { "name": "Neurology", "available": true, "doctors": 40, "nurses": 100 },
+      { "name": "Emergency", "available": true, "doctors": 62, "nurses": 190 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 650,
+      "availableBeds": 20,
+      "icuBeds": 140,
+      "availableICU": 5,
+      "ventilators": 75,
+      "availableVentilators": 7
+    },
+    "specializations": [
+      "cardiology", "neurology", "oncology", "orthopedics",
+      "trauma", "stroke", "cardiac_arrest", "burn"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "mri", "xray", "ultrasound", "dialysis",
+      "operation_theater", "cath_lab", "nicu", "picu",
+      "ambulance_service", "pharmacy", "lab"
+    ],
+    "pricing": {
+      "consultationFee": 1800,
+      "emergencyFee": 3500,
+      "bedChargesPerDay": 9000,
+      "icuChargesPerDay": 28000,
+      "acceptsInsurance": true,
+      "acceptsAyushman": false,
+      "estimatedCost": {
+        "cardiac": 350000,
+        "accident": 160000,
+        "stroke": 270000,
+        "general": 55000
+      }
+    },
+    "governmentSchemes": [],
+    "accreditation": ["NABH", "JCI"],
+    "status": "operational",
+    "rating": 4.8,
+    "totalPatientsTreated": 800000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 9:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  }
+]

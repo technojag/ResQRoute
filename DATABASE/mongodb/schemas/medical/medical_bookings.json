@@ -1,0 +1,173 @@
+{
+  "collection": "hospitals",
+  "schema": {
+    "bsonType": "object",
+    "required": ["name", "type", "location", "contactNumber", "status"],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string",
+        "minLength": 2,
+        "maxLength": 200
+      },
+      "type": {
+        "bsonType": "string",
+        "enum": ["government", "private"],
+        "description": "CRITICAL: Government (FREE) or Private (Paid)"
+      },
+      "category": {
+        "bsonType": "string",
+        "enum": ["multi_specialty", "specialty", "general", "trauma_center", "emergency"],
+        "description": "Hospital category"
+      },
+      "location": {
+        "bsonType": "object",
+        "required": ["type", "coordinates"],
+        "properties": {
+          "type": {
+            "bsonType": "string",
+            "enum": ["Point"]
+          },
+          "coordinates": {
+            "bsonType": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "bsonType": "double" },
+            "description": "[longitude, latitude]"
+          },
+          "address": { "bsonType": "string" },
+          "city": { "bsonType": "string" },
+          "state": { "bsonType": "string" },
+          "pincode": { "bsonType": "string" }
+        }
+      },
+      "contactNumber": {
+        "bsonType": "string",
+        "pattern": "^\\+?[1-9]\\d{1,14}$"
+      },
+      "emergencyNumber": {
+        "bsonType": "string"
+      },
+      "email": {
+        "bsonType": "string"
+      },
+      "departments": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "name": { "bsonType": "string" },
+            "available": { "bsonType": "bool" },
+            "doctors": { "bsonType": "int" },
+            "nurses": { "bsonType": "int" }
+          }
+        }
+      },
+      "emergencyCapacity": {
+        "bsonType": "object",
+        "properties": {
+          "totalBeds": { "bsonType": "int" },
+          "availableBeds": { "bsonType": "int" },
+          "icuBeds": { "bsonType": "int" },
+          "availableICU": { "bsonType": "int" },
+          "ventilators": { "bsonType": "int" },
+          "availableVentilators": { "bsonType": "int" }
+        }
+      },
+      "specializations": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "enum": [
+            "cardiology", "neurology", "orthopedics", "pediatrics", 
+            "gynecology", "trauma", "burn", "poison", "snake_bite",
+            "stroke", "cardiac_arrest", "accident", "maternity"
+          ]
+        }
+      },
+      "facilities": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "enum": [
+            "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+            "ct_scan", "mri", "xray", "ultrasound", "dialysis",
+            "operation_theater", "cath_lab", "nicu", "picu",
+            "ambulance_service", "pharmacy", "lab"
+          ]
+        }
+      },
+      "pricing": {
+        "bsonType": "object",
+        "properties": {
+          "consultationFee": { "bsonType": "double" },
+          "emergencyFee": { "bsonType": "double" },
+          "bedChargesPerDay": { "bsonType": "double" },
+          "icuChargesPerDay": { "bsonType": "double" },
+          "acceptsInsurance": { "bsonType": "bool" },
+          "acceptsAyushman": { "bsonType": "bool" },
+          "estimatedCost": {
+            "bsonType": "object",
+            "properties": {
+              "cardiac": { "bsonType": "double" },
+              "accident": { "bsonType": "double" },
+              "stroke": { "bsonType": "double" },
+              "general": { "bsonType": "double" }
+            }
+          }
+        }
+      },
+      "governmentSchemes": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "enum": ["ayushman_bharat", "pmjay", "state_health_scheme", "esic", "cghs"]
+        },
+        "description": "Only for government hospitals"
+      },
+      "accreditation": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string",
+          "enum": ["NABH", "NABL", "JCI", "ISO"]
+        }
+      },
+      "status": {
+        "bsonType": "string",
+        "enum": ["operational", "full", "limited", "maintenance", "closed"],
+        "description": "Current operational status"
+      },
+      "rating": {
+        "bsonType": "double",
+        "description": "Average rating (0-5)"
+      },
+      "totalPatientsTreated": {
+        "bsonType": "int"
+      },
+      "ambulances": {
+        "bsonType": "array",
+        "items": { "bsonType": "objectId" },
+        "description": "Array of ambulance IDs belonging to this hospital"
+      },
+      "workingHours": {
+        "bsonType": "object",
+        "properties": {
+          "emergency": { "bsonType": "string", "default": "24x7" },
+          "opd": { "bsonType": "string" }
+        }
+      },
+      "isActive": {
+        "bsonType": "bool",
+        "default": true
+      },
+      "createdAt": {
+        "bsonType": "date"
+      },
+      "updatedAt": {
+        "bsonType": "date"
+      }
+    }
+  }
+}

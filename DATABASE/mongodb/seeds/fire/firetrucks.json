@@ -1,0 +1,122 @@
+[
+  {
+    "vehicleNumber": "DL01FT1001",
+    "type": "pumper",
+    "stationId": null,
+    "captain": {
+      "name": "Ramesh Singh",
+      "phone": "+91-9876543230",
+      "rank": "Station Officer"
+    },
+    "crew": [
+      { "name": "Anil Kumar", "role": "Driver", "phone": "+91-9876543231", "onDuty": true },
+      { "name": "Sunil Yadav", "role": "Fire Fighter", "phone": "+91-9876543232", "onDuty": true },
+      { "name": "Rajiv Sharma", "role": "Fire Fighter", "phone": "+91-9876543233", "onDuty": true },
+      { "name": "Dinesh Verma", "role": "Fire Fighter", "phone": "+91-9876543234", "onDuty": true }
+    ],
+    "equipment": {
+      "waterCapacity": 4000,
+      "currentWaterLevel": 4000,
+      "foamCapacity": 500,
+      "currentFoamLevel": 500,
+      "ladderHeight": 0,
+      "hoses": 6,
+      "oxygenTanks": 8,
+      "powerTools": ["Hydraulic Cutter", "Spreader", "Chainsaw"],
+      "rescueEquipment": ["Rope", "Harness", "Breathing Apparatus"]
+    },
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2245, 28.6358],
+      "address": "Central Fire Station"
+    },
+    "totalIncidents": 342,
+    "rating": 4.8,
+    "lastMaintenanceDate": { "$date": "2024-01-10T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-04-10T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-06-30T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2022-03-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "vehicleNumber": "DL01FT1002",
+    "type": "ladder",
+    "stationId": null,
+    "captain": {
+      "name": "Vikram Patel",
+      "phone": "+91-9876543235",
+      "rank": "Sub Officer"
+    },
+    "crew": [
+      { "name": "Manoj Das", "role": "Driver", "phone": "+91-9876543236", "onDuty": true },
+      { "name": "Sanjay Gupta", "role": "Fire Fighter", "phone": "+91-9876543237", "onDuty": true },
+      { "name": "Ashok Tiwari", "role": "Fire Fighter", "phone": "+91-9876543238", "onDuty": true }
+    ],
+    "equipment": {
+      "waterCapacity": 2000,
+      "currentWaterLevel": 2000,
+      "foamCapacity": 300,
+      "currentFoamLevel": 300,
+      "ladderHeight": 32,
+      "hoses": 4,
+      "oxygenTanks": 6,
+      "powerTools": ["Hydraulic Cutter", "Spreader"],
+      "rescueEquipment": ["Rope", "Harness", "Breathing Apparatus", "Rescue Basket"]
+    },
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2245, 28.6358],
+      "address": "Central Fire Station"
+    },
+    "totalIncidents": 218,
+    "rating": 4.7,
+    "lastMaintenanceDate": { "$date": "2024-02-05T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-05-05T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-08-31T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2022-05-15T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "vehicleNumber": "DL02FT2001",
+    "type": "tanker",
+    "stationId": null,
+    "captain": {
+      "name": "Prakash Joshi",
+      "phone": "+91-9876543239",
+      "rank": "Leading Fire Man"
+    },
+    "crew": [
+      { "name": "Rahul Mishra", "role": "Driver", "phone": "+91-9876543240", "onDuty": true },
+      { "name": "Deepak Singh", "role": "Fire Fighter", "phone": "+91-9876543241", "onDuty": true }
+    ],
+    "equipment": {
+      "waterCapacity": 10000,
+      "currentWaterLevel": 10000,
+      "foamCapacity": 0,
+      "currentFoamLevel": 0,
+      "ladderHeight": 0,
+      "hoses": 2,
+      "oxygenTanks": 4,
+      "powerTools": [],
+      "rescueEquipment": ["Rope", "Breathing Apparatus"]
+    },
+    "status": "available",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2167, 28.7041],
+      "address": "North Fire Station"
+    },
+    "totalIncidents": 156,
+    "rating": 4.6,
+    "lastMaintenanceDate": { "$date": "2024-01-25T00:00:00.000Z" },
+    "nextMaintenanceDue": { "$date": "2024-04-25T00:00:00.000Z" },
+    "fitnessExpiryDate": { "$date": "2025-07-31T00:00:00.000Z" },
+    "isActive": true,
+    "createdAt": { "$date": "2022-06-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  }
+]

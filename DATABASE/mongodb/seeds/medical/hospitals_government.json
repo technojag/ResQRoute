@@ -1,0 +1,198 @@
+[
+  {
+    "name": "AIIMS Delhi",
+    "type": "government",
+    "category": "multi_specialty",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2090, 28.5672],
+      "address": "Ansari Nagar, New Delhi, Delhi 110029",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110029"
+    },
+    "contactNumber": "+91-11-26588500",
+    "emergencyNumber": "+91-11-26588700",
+    "email": "aiims.delhi@gov.in",
+    "departments": [
+      { "name": "Cardiology", "available": true, "doctors": 45, "nurses": 120 },
+      { "name": "Neurology", "available": true, "doctors": 38, "nurses": 95 },
+      { "name": "Orthopedics", "available": true, "doctors": 42, "nurses": 100 },
+      { "name": "Emergency", "available": true, "doctors": 60, "nurses": 180 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 2500,
+      "availableBeds": 45,
+      "icuBeds": 250,
+      "availableICU": 8,
+      "ventilators": 150,
+      "availableVentilators": 12
+    },
+    "specializations": [
+      "cardiology", "neurology", "orthopedics", "trauma",
+      "burn", "poison", "stroke", "cardiac_arrest"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "mri", "xray", "ultrasound", "dialysis",
+      "operation_theater", "cath_lab", "nicu", "picu",
+      "ambulance_service", "pharmacy", "lab"
+    ],
+    "pricing": {
+      "consultationFee": 0,
+      "emergencyFee": 0,
+      "bedChargesPerDay": 0,
+      "icuChargesPerDay": 0,
+      "acceptsInsurance": false,
+      "acceptsAyushman": true,
+      "estimatedCost": {
+        "cardiac": 0,
+        "accident": 0,
+        "stroke": 0,
+        "general": 0
+      }
+    },
+    "governmentSchemes": ["ayushman_bharat", "pmjay", "cghs"],
+    "accreditation": ["NABH", "NABL"],
+    "status": "operational",
+    "rating": 4.8,
+    "totalPatientsTreated": 2500000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 5:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "name": "Safdarjung Hospital",
+    "type": "government",
+    "category": "multi_specialty",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.2064, 28.5675],
+      "address": "Ring Road, Ansari Nagar East, New Delhi, Delhi 110029",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "pincode": "110029"
+    },
+    "contactNumber": "+91-11-26165060",
+    "emergencyNumber": "+91-11-26165061",
+    "email": "safdarjung.hospital@gov.in",
+    "departments": [
+      { "name": "Cardiology", "available": true, "doctors": 35, "nurses": 90 },
+      { "name": "Neurology", "available": true, "doctors": 28, "nurses": 75 },
+      { "name": "Emergency", "available": true, "doctors": 50, "nurses": 150 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 1800,
+      "availableBeds": 32,
+      "icuBeds": 180,
+      "availableICU": 5,
+      "ventilators": 100,
+      "availableVentilators": 8
+    },
+    "specializations": [
+      "cardiology", "neurology", "orthopedics", "trauma",
+      "gynecology", "pediatrics", "accident"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "mri", "xray", "dialysis", "operation_theater",
+      "ambulance_service", "pharmacy", "lab"
+    ],
+    "pricing": {
+      "consultationFee": 0,
+      "emergencyFee": 0,
+      "bedChargesPerDay": 0,
+      "icuChargesPerDay": 0,
+      "acceptsInsurance": false,
+      "acceptsAyushman": true,
+      "estimatedCost": {
+        "cardiac": 0,
+        "accident": 0,
+        "stroke": 0,
+        "general": 0
+      }
+    },
+    "governmentSchemes": ["ayushman_bharat", "pmjay", "state_health_scheme"],
+    "accreditation": ["NABH"],
+    "status": "operational",
+    "rating": 4.5,
+    "totalPatientsTreated": 1800000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 2:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  },
+  {
+    "name": "GTB Hospital (Govt)",
+    "type": "government",
+    "category": "trauma_center",
+    "location": {
+      "type": "Point",
+      "coordinates": [77.3020, 28.6667],
+      "address": "Dilshad Garden, Delhi 110095",
+      "city": "Delhi",
+      "state": "Delhi",
+      "pincode": "110095"
+    },
+    "contactNumber": "+91-11-22582555",
+    "emergencyNumber": "+91-11-22582666",
+    "email": "gtbhospital@gov.in",
+    "departments": [
+      { "name": "Trauma", "available": true, "doctors": 40, "nurses": 110 },
+      { "name": "Emergency", "available": true, "doctors": 55, "nurses": 160 },
+      { "name": "Burn", "available": true, "doctors": 20, "nurses": 50 }
+    ],
+    "emergencyCapacity": {
+      "totalBeds": 1500,
+      "availableBeds": 28,
+      "icuBeds": 200,
+      "availableICU": 6,
+      "ventilators": 120,
+      "availableVentilators": 10
+    },
+    "specializations": [
+      "trauma", "burn", "accident", "orthopedics",
+      "neurology", "cardiac_arrest"
+    ],
+    "facilities": [
+      "24x7_emergency", "blood_bank", "oxygen", "ventilator",
+      "ct_scan", "xray", "operation_theater", "ambulance_service"
+    ],
+    "pricing": {
+      "consultationFee": 0,
+      "emergencyFee": 0,
+      "bedChargesPerDay": 0,
+      "icuChargesPerDay": 0,
+      "acceptsInsurance": false,
+      "acceptsAyushman": true,
+      "estimatedCost": {
+        "cardiac": 0,
+        "accident": 0,
+        "stroke": 0,
+        "general": 0
+      }
+    },
+    "governmentSchemes": ["ayushman_bharat", "pmjay"],
+    "accreditation": ["NABH"],
+    "status": "operational",
+    "rating": 4.6,
+    "totalPatientsTreated": 1200000,
+    "ambulances": [],
+    "workingHours": {
+      "emergency": "24x7",
+      "opd": "8:00 AM - 2:00 PM"
+    },
+    "isActive": true,
+    "createdAt": { "$date": "2024-01-01T00:00:00.000Z" },
+    "updatedAt": { "$date": "2024-02-16T00:00:00.000Z" }
+  }
+]
