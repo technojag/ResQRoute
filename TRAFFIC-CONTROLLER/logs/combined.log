@@ -1,0 +1,6 @@
+{"level":"info","message":"Initializing traffic signals...","timestamp":"2026-02-18 07:06:16"}
+{"code":"ECONNREFUSED","level":"error","message":"MQTT connection error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1122:18)\n    at afterConnectMultiple (node:net:1689:7)","timestamp":"2026-02-18 07:06:16"}
+{"level":"info","message":"Initializing traffic signals...","timestamp":"2026-02-18 07:25:26"}
+{"code":"ECONNREFUSED","level":"error","message":"MQTT connection error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1122:18)\n    at afterConnectMultiple (node:net:1689:7)","timestamp":"2026-02-18 07:25:26"}
+{"level":"info","message":"Traffic Controller (MOCK) running on port 6000","timestamp":"2026-02-20 09:45:39"}
+{"level":"warn","message":"Running in MOCK mode - no MQTT broker needed","timestamp":"2026-02-20 09:45:39"}
