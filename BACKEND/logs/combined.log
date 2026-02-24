@@ -2,3 +2,7 @@
 {"level":"info","message":"MongoDB connected ✅","timestamp":"2026-02-17 15:11:34"}
 {"level":"info","message":"Routes loaded ✅","timestamp":"2026-02-17 15:59:29"}
 {"level":"info","message":"MongoDB connected ✅","timestamp":"2026-02-17 15:59:29"}
+{"level":"info","message":"Routes loaded ✅","timestamp":"2026-02-23 14:12:53"}
+{"level":"warn","message":"MongoDB skipped: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","timestamp":"2026-02-23 14:13:23"}
+{"level":"info","message":"Routes loaded ✅","timestamp":"2026-02-24 11:47:19"}
+{"level":"info","message":"MongoDB connected ✅","timestamp":"2026-02-24 11:47:19"}
